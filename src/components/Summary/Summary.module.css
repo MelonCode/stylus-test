@@ -1,0 +1,103 @@
+.card {
+  display: grid;
+  grid-template-rows: 36px auto 36px;
+  grid-template-areas:
+    'header'
+    'content'
+    'footer';
+  height: 250px;
+  width: 308px;
+}
+
+.header {
+  grid-area: header;
+  height: 36px;
+  border-bottom: 2px solid var(--color-border);
+  font-weight: 500;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.handle {
+  cursor: grab;
+  margin-right: 8px;
+  padding: 2px;
+}
+
+.handle:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 0 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chipButton {
+  height: 52px;
+  padding: 0 10px;
+}
+
+.item {
+  display: inline-flex;
+}
+
+.label {
+  width: 120px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.dot {
+  margin: 0 8px;
+  color: var(--color-text-gray);
+  display: inline-block;
+  user-select: none;
+}
+
+.label:after {
+  content: ' ..................................... ';
+  font-weight: 400;
+  letter-spacing: 0.25ch;
+  color: gainsboro;
+  position: absolute;
+  padding-left: 5px;
+}
+
+.showmore {
+  --btn-color: var(--color-text-gray);
+  color: var(--color-text-gray);
+  text-align: left;
+  width: fit-content;
+  margin-top: 1rem;
+}
+
+.highlight::before {
+  content: '';
+  background: rgb(45, 130, 248);
+  border-radius: 6px;
+  margin-right: 6px;
+  padding-right: 4px;
+}
+
+.holdings {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.gray {
+  color: var(--color-text-gray);
+}

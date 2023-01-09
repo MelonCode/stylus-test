@@ -1,0 +1,39 @@
+.app {
+  display: grid;
+  grid-template-columns: 160px auto;
+  grid-template-areas: 'sidebar content';
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  min-height: 100vh;
+}
+
+.collapsed {
+  grid-template-columns: 46px auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  gap: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text-link);
+}
+
+.section {
+  display: flex;
+}
